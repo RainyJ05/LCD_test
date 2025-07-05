@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "touch.h": "c",
+        "main.h": "c",
+        "stm32f4xx.h": "c",
+        "lcd.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "FONT.H": "cpp",
+        "initializer_list": "c",
+        "utility": "c",
+        "xstring": "c",
+        "xutility": "c",
+        "string": "c",
+        "math.h": "c",
+        "spi.h": "c"
+    }
+}
