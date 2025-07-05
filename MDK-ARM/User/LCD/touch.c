@@ -85,8 +85,63 @@ uint16_t XPT2046_Read_Filter(SPI_HandleTypeDef *hspi, uint16_t cmd)
 }
 
 
+/*
+排序函数
+*/
+void sort(uint16_t arr[],int size)
+{
+	int j ,i ,tem;
+	for(i = 0;i < size - 1;i++)
+	{
+		int count = 0;
+		for(j = 0;j < size - 1;j++)
+		{
+			if(arr[j] > arr[j+1])
+			{
+				tem = arr[j];
+				arr[j] = arr[j+1];
+				arr[j + 1] = tem;
+				count = 1;
+			}
+			if(count == 0)
+				break;
+		}
+	}
+}
 
-
+/*
+坐标转换函数
+*/
+uint32_t XPT2046_Get_Point(SPI_HandleTypeDef *hspi)
+{
+		uint16_t adc_x ,adc_y;
+		static uint16_t x_buf[5],y_buf[5],count = 0;
+		uint32_t num = 0;
+#if defined( LCD_T_PEN_GPIO_Port)
+		if(HAL_GPIO_ReadPin(LCD_T_PEN_GPIO_Port,LCD_T_PEN_Pin) == GPIO_PIN_RESET)
+		{
+				if(count < 5)
+				{
+						x_buf[count] = XPT2046_Read(hspi,0xd0);
+						y_buf[count] = XPT2046_Read(hspi,0x90);
+						count++;
+				}
+				else
+				{
+						count = 0;
+						sort(x_buf,5);
+						sort(y_buf,5);
+						adc_x = (x_buf[1] + x_buf[2] + x_buf[3]) /3;
+					  adc_y = (y_buf[1] + y_buf[2] + y_buf[3]) /3;
+				}
+				
+				num = (uint16_t)(touch_x_k * adc_x + touch_x_b);
+				num <<= 16;
+				num |= (uint16_t)(touch_y_k * adc_y + touch_y_b);
+		}
+#endif
+		return num;
+}
 
 
 

@@ -47,12 +47,17 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+void test1()
+{
+	
+}
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+
 
 /* USER CODE END PFP */
 
@@ -103,6 +108,8 @@ int main(void)
 	BACK_COLOR = GREEN;
 	char str[20] = {0};
 	uint16_t adc_value = 0;
+	uint32_t num = 0;
+
   while (1)
   {
 			adc_value = XPT2046_Read_Filter(&hspi2,0xd0);
@@ -111,7 +118,19 @@ int main(void)
 			adc_value =XPT2046_Read_Filter(&hspi2,0x90);
 			sprintf(str, "ADC_Y:%4d", adc_value);
 			LCD_ShowString(10, 40, 400, 400, 24, (uint8_t*)str);
-			HAL_Delay(100);
+			
+			num = XPT2046_Get_Point(&hspi2);
+			if((num>>16)&&(num&0xffff) != 0)
+			{
+				sprintf(str,"X:%3d",num>>16);
+				LCD_ShowString(10,70,400,400,24,(uint8_t*)str);
+				sprintf(str,"Y:%3d",num&0xffff);
+				LCD_ShowString(10,100,400,400,24,(uint8_t*)str);
+				LCD_Draw_Circle(num>>16,num&0xffff,2);
+			}
+		  
+		
+			HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -1,7 +1,7 @@
 Dependencies for Project 'LCD_test', Target 'LCD_test': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (startup_stm32f407xx.s)(0x68400BCE)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_LCD_test-IC:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\keil5\pack\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 535" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f407xx.lst --xref -o lcd_test\startup_stm32f407xx.o --depend lcd_test\startup_stm32f407xx.d)
-F (../Core/Src/main.c)(0x6840169E)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./User/LCD-I.\RTE\_LCD_test-IC:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\keil5\pack\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_test\main.o --omf_browse lcd_test\main.crf --depend lcd_test\main.d)
+F (../Core/Src/main.c)(0x6868D7DD)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./User/LCD-I.\RTE\_LCD_test-IC:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\keil5\pack\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_test\main.o --omf_browse lcd_test\main.crf --depend lcd_test\main.d)
 I (../Core/Inc/main.h)(0x683FEC0F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x683A6EE4)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x683FEC0F)
@@ -38,7 +38,7 @@ I (../Core/Inc/gpio.h)(0x683FE4E8)
 I (../Core/Inc/fsmc.h)(0x683FE4E9)
 I (./User/LCD/lcd.h)(0x682F2648)
 I (C:\keil5\ARM\ARMCC\include\stdlib.h)(0x60252374)
-I (./User/LCD/touch.h)(0x68401685)
+I (./User/LCD/touch.h)(0x6868D2A1)
 I (C:\keil5\ARM\ARMCC\include\math.h)(0x60252378)
 I (C:\keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
 F (../Core/Src/gpio.c)(0x6840036F)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./User/LCD-I.\RTE\_LCD_test-IC:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\keil5\pack\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_test\gpio.o --omf_browse lcd_test\gpio.crf --depend lcd_test\gpio.d)
@@ -830,8 +830,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x683A6EE4)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x683A6EE4)
 I (User\LCD\font.h)(0x67D0F26E)
 F (.\User\LCD\lcd.h)(0x682F2648)()
-F (.\User\LCD\touch.c)(0x6840160C)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./User/LCD-I.\RTE\_LCD_test-IC:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\keil5\pack\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_test\touch.o --omf_browse lcd_test\touch.crf --depend lcd_test\touch.d)
-I (User\LCD\touch.h)(0x68401685)
+F (.\User\LCD\touch.c)(0x6868D571)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./User/LCD-I.\RTE\_LCD_test-IC:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\keil5\pack\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o lcd_test\touch.o --omf_browse lcd_test\touch.crf --depend lcd_test\touch.d)
+I (User\LCD\touch.h)(0x6868D2A1)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x683A6EE1)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h)(0x683A6EE1)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x683A6EE0)
@@ -865,4 +865,4 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x683A6EE4)
 I (../Core/Inc/main.h)(0x683FEC0F)
 I (C:\keil5\ARM\ARMCC\include\math.h)(0x60252378)
 I (C:\keil5\ARM\ARMCC\include\stdlib.h)(0x60252374)
-F (.\User\LCD\touch.h)(0x68401685)()
+F (.\User\LCD\touch.h)(0x6868D2A1)()
